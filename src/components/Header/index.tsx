@@ -2,10 +2,11 @@ import React, { ButtonHTMLAttributes } from "react"
 
 
 let links = [
-    {},
-    {},
-    {},
-    {},
+    {name:"",url:""},
+    {name:"",url:""},
+    {name:"",url:""},
+    {name:"",url:""},
+    {name:"",url:""},
 ]
 type Header_Props = {
 
