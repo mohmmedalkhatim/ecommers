@@ -12,17 +12,24 @@ html.lenis body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #e2e2e2;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+@layer components {
+  input {
+    @apply py-2 px-3 rounded-md;
+    border: 1px solid white;
+    &:focus {
+      outline: none;
+    }
+  }
+}
 
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
-  
 }
 
 .lenis.lenis-stopped {
@@ -37,7 +44,7 @@ html.lenis body {
   font-family: Alro;
   src: url(/fonts/Quicksand_wght.ttf);
 }
-main{
+main {
   background-image: white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,5 +54,4 @@ main{
   overflow-x: hidden;
 }
 @layer components {
-
 }

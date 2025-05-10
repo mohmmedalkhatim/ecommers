@@ -6,7 +6,7 @@ function App() {
   console.log("hello")
   return (
     <>
-      <Header />
+      <Header className=' bg-sky-600 text-white' />
       <Outlet />
     </>
   );
