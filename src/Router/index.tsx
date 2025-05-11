@@ -11,7 +11,7 @@ import Product from '../screens/Products/Product';
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} index />
       <Route path="/products" element={<Products />} />
       <Route path="/product/:id" element={<Product />} />
     </Route>
