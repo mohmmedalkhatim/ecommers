@@ -1,7 +1,6 @@
 import { create } from 'zustand';
-import Pocketbase from 'pocketbase';
+import { pb } from '../../main';
 
-let pb = new Pocketbase('http://127.0.0.1:8090');
 
 class Error {
   isError: boolean = false;

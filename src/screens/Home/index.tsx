@@ -1,7 +1,9 @@
+import Testimonies from '../../sections/Testimonies';
 
-function Home() {
+function Home () {
   return (
-    <main>
+    <main className='text-black'>
+      <Testimonies />
     </main>
   );
 }
