@@ -3,6 +3,8 @@ import Logo from "../Logo"
 import { Link } from "react-router-dom"
 import Input from "../Input"
 import { TbSearch } from "react-icons/tb"
+import { classNames } from "../../util/classesName"
+import MyLink from "./Link"
 
 
 let links = [
@@ -18,7 +20,7 @@ type Header_Props = {
 
 function Header(props: Header_Props) {
     return (
-        <header className="flex w-screen py-4" {...props}>
+        <header className={"border-b py-4"}{...props}>
             <div className="container flex px-48 py-4 flex-col gap-4
             ">
                 <div className="flex justify-between">
@@ -27,9 +29,7 @@ function Header(props: Header_Props) {
                 </div>
                 <nav className="flex list-none gap-4">
                     {links.map((item, i) => (
-                        <Link to={item.url} key={i}>
-                            <li>{item.name}</li>
-                        </Link>
+                        <MyLink key={i} url={item.url} name={item.name}/>
                     ))}
                 </nav>
 
