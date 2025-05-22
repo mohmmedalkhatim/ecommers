@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div>Footer</div>
+    <footer className="content">Footer</footer >
   )
 }
 export default Footer

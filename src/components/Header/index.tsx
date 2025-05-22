@@ -1,9 +1,7 @@
 import { AllHTMLAttributes } from "react"
 import Logo from "../Logo"
-import { Link } from "react-router-dom"
 import Input from "../Input"
-import { TbSearch } from "react-icons/tb"
-import { classNames } from "../../util/classesName"
+import { TbMenu2, TbSearch } from "react-icons/tb"
 import MyLink from "./Link"
 
 
@@ -21,8 +19,7 @@ type Header_Props = {
 function Header(props: Header_Props) {
     return (
         <header className={"border-b py-4"}{...props}>
-            <div className="container flex px-48 py-4 flex-col gap-4
-            ">
+            <div className="md:flex hidden content w-full  flex-col gap-4 ">
                 <div className="flex justify-between">
                     <Logo />
                     <Input icon={<TbSearch size={"1rem"} />} className="w-[20rem]" placeholder="what are you looking for...." />
@@ -32,7 +29,10 @@ function Header(props: Header_Props) {
                         <MyLink key={i} url={item.url} name={item.name}/>
                     ))}
                 </nav>
-
+            </div>
+            <div className="flex md:hidden content items-center justify-between gap-4 ">
+                <Logo/>
+                <TbMenu2 size={"1.6rem"}/>
             </div>
         </header>
     )
