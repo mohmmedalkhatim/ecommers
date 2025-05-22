@@ -1,6 +1,8 @@
 function Products() {
   return (
-    <section className="content h-4">Products</section>
+    <section className="content">
+        
+    </section>
   )
 }
 export default Products

@@ -1,9 +1,11 @@
+import Products from '../../sections/Products';
 import Testimonies from '../../sections/Testimonies';
 
 function Home () {
   return (
-    <main className='text-black'>
+    <main className='p-0 text-black'>
       <Testimonies />
+      <Products />
     </main>
   );
 }
