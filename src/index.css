@@ -8,6 +8,10 @@ html.lenis body {
   height: auto;
   overflow-y: auto;
 }
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 :root {
   font-size: 16px;
   line-height: 24px;
@@ -23,13 +27,16 @@ html.lenis body {
     @apply h-14 bg-[url(/imgs/self.png)] w-14 bg-cover bg-no-repeat rounded-full;
   }
   .commit_container{
-    @apply flex flex-col px-4  py-12 items-center gap-8 border
+    @apply flex flex-col py-12 items-center gap-8 border
   }
   input {
     @apply py-2 px-3 rounded-md border;
     &:focus {
       outline: none;
     }
+  }
+  footer{
+    @apply fixed bottom-0 w-full h-32
   }
 }
 
