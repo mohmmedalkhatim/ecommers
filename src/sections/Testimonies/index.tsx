@@ -18,7 +18,7 @@ function Testimonies () {
             sint consectetur.
           </div>
         </div>
-        <div className="commit_container hidden lg:block">
+        <div className="commit_container hidden lg:flex">
           <div className='commit_img' />
           <div className="w-[80%]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit minus

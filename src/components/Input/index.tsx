@@ -25,7 +25,7 @@ export default function Input({
 }: InputProps) {
   const [touched, setTouched] = useState(false);
   const hasError = error && touched;
-
+  
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
@@ -36,7 +36,7 @@ export default function Input({
 
       <div
         className={`group flex items-center border rounded-md transition-all
-          ${hasError ? 'border-red-500' : 'border-stone-50'} 
+          ${hasError ? 'border-red-500' : 'border-stone-400'} 
           focus-within:ring focus-within:ring-[#e2e2e220]`}
       >
         <input
