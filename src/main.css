@@ -2,8 +2,24 @@
 
 
 
-@layer components{
-    .content{
+@layer components {
+    .content {
         @apply sm:px-12 md:px-40 xl:px-48
+    }
+
+    .header {
+        @apply fixed top-0
+    }
+
+    input {
+        @apply py-2 px-3 rounded-md border;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    footer {
+        @apply fixed bottom-0 w-full h-32 text-sm border-t py-4
     }
 }
