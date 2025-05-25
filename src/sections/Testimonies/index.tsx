@@ -1,7 +1,7 @@
 function Testimonies () {
   return (
     <section className='flex items-center justify-center  gap-4'>
-      <div className='flex h-[30rem] w-full gap-12 py-12 content flex-col xl:flex-row'>
+      <div className='flex h-[30rem] w-full gap-12 py-12 flex-col xl:flex-row'>
         <div className="commit_container">
           <div className='commit_img' />
           <div className="w-[80%]">
