@@ -13,11 +13,11 @@ let list = [
 
 function Services () {
   return (
-    <main className='h-auto gap-4'>
-      <section className='services_container'>
+    <section className='h-auto gap-4 content'>
+      <main className='services_container'>
         {list.map((item)=>(<Service {...item}/>))}
-      </section>
-    </main>
+      </main>
+    </section>
   );
 }
 export default Services;
