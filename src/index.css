@@ -3,6 +3,10 @@
 @tailwind utilities;
 @tailwind variants;
 
+::-webkit-scrollbar{
+
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -12,12 +16,17 @@ html.lenis body {
   box-sizing: border-box;
   margin: 0;
 }
+.html{
+
+}
+
 :root {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  scrollbar-gutter: stable both-edges;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -29,7 +38,10 @@ html.lenis body {
   .commit_container{
     @apply flex flex-col py-12 items-center gap-8 border
   }
-
+  .services_container{
+    grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
+    @apply w-full h-auto grid gap-12;
+  }
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -49,13 +61,7 @@ html.lenis body {
   src: url(/fonts/Quicksand_wght.ttf);
 }
 main {
-  background-image: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  scrollbar-gutter: stable both-edges;
-  color: aliceblue;
-  overflow-x: hidden;
+
 }
 @layer components {
 }
