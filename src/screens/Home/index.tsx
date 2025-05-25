@@ -1,12 +1,13 @@
 import Products from '../../sections/Products';
+import Services from '../../sections/services/indxe';
 import Testimonies from '../../sections/Testimonies';
 
 function Home () {
   return (
-    <main className='p-0 text-black'>
+    <section className='content'>
       <Testimonies />
-      <Products />
-    </main>
+      <Services/>
+    </section>
   );
 }
 export default Home;
