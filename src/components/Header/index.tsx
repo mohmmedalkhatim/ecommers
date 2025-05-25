@@ -8,7 +8,7 @@ import { useAside } from "../../context/Aside"
 
 let links = [
     { name: "Home", url: "" },
-    { name: "products", url: "" },
+    { name: "products", url: "/products" },
     { name: "collation", url: "" },
     { name: "about", url: "" },
     { name: "my_account", url: "" },
