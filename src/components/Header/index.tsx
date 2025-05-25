@@ -20,7 +20,7 @@ type Header_Props = {
 function Header(props: Header_Props) {
     let openAsdie = useAside(state=>state.toggle)
     return (
-        <header className={"border-b py-4 text-sm "}{...props}>
+        <header className={"border-b py-4 text-sm sticky top-0 bg-white "}{...props}>
             <div className="md:flex hidden content w-full  flex-col gap-4 ">
                 <div className="flex justify-between">
                     <Logo />
