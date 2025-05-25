@@ -3,22 +3,19 @@
 @tailwind utilities;
 @tailwind variants;
 
-::-webkit-scrollbar{
-
-}
 
 html.lenis,
 html.lenis body {
   height: auto;
   overflow-y: auto;
 }
-*{
+
+* {
   box-sizing: border-box;
   margin: 0;
 }
-.html{
 
-}
+.html {}
 
 :root {
   font-size: 16px;
@@ -31,16 +28,51 @@ html.lenis body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 @layer components {
-  .commit_img{
+  .commit_img {
     @apply h-14 bg-[url(/imgs/self.png)] w-14 bg-cover bg-no-repeat rounded-full;
   }
-  .commit_container{
+
+  .commit_container {
     @apply flex flex-col py-12 items-center gap-8 border
   }
-  .services_container{
-    grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
-    @apply w-full h-auto grid gap-12;
+
+  .services_container {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    @apply w-full h-auto grid gap-12 py-24;
+  }
+
+  .hero_content {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    @apply grid;
+  }
+
+  .hero_call_to_action {
+    @apply flex flex-col gap-8
+  }
+  h1 {
+    @apply text-5xl sm:text-6xl md:text-7xl font-bold text-stone-700;
+  }
+
+  h2 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-semibold text-stone-700;
+  }
+
+  h3 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-medium text-stone-700;
+  }
+
+  h4 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-medium text-stone-700;
+  }
+
+  h5 {
+    @apply text-xl sm:text-2xl md:text-3xl font-normal text-stone-700;
+  }
+
+  h6 {
+    @apply text-lg sm:text-xl md:text-2xl font-light text-stone-700;
   }
 }
 
@@ -60,8 +92,7 @@ html.lenis body {
   font-family: Alro;
   src: url(/fonts/Quicksand_wght.ttf);
 }
-main {
 
-}
-@layer components {
-}
+main {}
+
+@layer components {}

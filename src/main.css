@@ -7,7 +7,7 @@
         @apply px-8 sm:px-12 md:px-40 xl:px-48
     }
 
-    .header {
+    header {
         @apply fixed top-0
     }
 
