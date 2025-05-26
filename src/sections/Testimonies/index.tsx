@@ -25,9 +25,9 @@ function Testimonies () {
   return (
     <section className='flex items-center justify-center  gap-4 content'>
       <div className='flex w-full gap-12 py-12 flex-col xl:flex-row'>
-        {list.map(item => (
-          <Commit {...item} />
-        ))} 
+        {list.map((item, i) => (
+          <Commit key={i} {...item} />
+        ))}
       </div>
     </section>
   );

@@ -40,8 +40,8 @@ function Header (props: Header_Props) {
             ))}
           </div>
           <div className='flex gap-4'>
-            {info.map(item => (
-              <div>{item.icon}</div>
+            {info.map((item,i) => (
+              <div key={i}>{item.icon}</div>
             ))}
           </div>
         </nav>

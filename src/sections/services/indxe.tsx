@@ -15,7 +15,7 @@ function Services () {
   return (
     <section className='h-auto py-12 content'>
       <main className='services_container'>
-        {list.map((item)=>(<Service {...item}/>))}
+        {list.map((item,i)=>(<Service key={i} {...item}/>))}
       </main>
     </section>
   );

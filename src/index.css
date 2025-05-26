@@ -62,7 +62,11 @@ html.lenis body {
     row-gap: 8rem;
     @apply w-full h-auto grid  py-24;
   }
+  .products_wib{
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+    @apply grid;
 
+  }
   .hero_content {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     @apply grid;
