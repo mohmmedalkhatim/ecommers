@@ -58,8 +58,8 @@ html.lenis body {
   }
   .services_container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    column-gap: 5rem;
-    row-gap: 3rem;
+    column-gap: 4rem;
+    row-gap: 8rem;
     @apply w-full h-auto grid  py-24;
   }
 
