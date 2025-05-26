@@ -13,7 +13,7 @@ let list = [
 
 function Services () {
   return (
-    <section className='h-auto gap-4 content'>
+    <section className='h-auto py-12 gap-4 content'>
       <main className='services_container'>
         {list.map((item)=>(<Service {...item}/>))}
       </main>

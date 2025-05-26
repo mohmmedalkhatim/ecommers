@@ -24,6 +24,7 @@ html.lenis body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   scrollbar-gutter: stable both-edges;
+  overflow-y: visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -37,10 +38,29 @@ html.lenis body {
   .commit_container {
     @apply flex flex-col py-12 items-center gap-8 border
   }
-
+  .collation_container{
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    @apply grid;
+  }
+  .collation_elements{
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    @apply grid;
+  }
+  .element{
+    @apply p-4 border;
+  }
+  .products{
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    @apply grid py-8;
+  }
+  .filter{
+    @apply flex flex-col;
+  }
   .services_container {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    @apply w-full h-auto grid gap-12 py-24;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    column-gap: 5rem;
+    row-gap: 3rem;
+    @apply w-full h-auto grid  py-24;
   }
 
   .hero_content {

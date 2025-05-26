@@ -1,3 +1,4 @@
+import Collation from '../../sections/Collation';
 import Hero from '../../sections/Hero';
 import Products from '../../sections/Products';
 import Services from '../../sections/services/indxe';
@@ -9,6 +10,7 @@ function Home () {
       <Hero/>
       <Testimonies />
       <Services/>
+      <Collation/>
     </section>
   );
 }
