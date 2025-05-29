@@ -1,23 +1,16 @@
+import { Product } from '../../context/cart';
 import Button from '../Button';
 
-function ProductCard ({
-  image,
-  name,
-  price,
-}: {
-  image: string;
-  name: string;
-  price: string;
-}) {
+function ProductCard({ image, name, price }: Product) {
   return (
-    <li className='border p-4 list-none'>
-      <img src={'/imgs/self.png'} alt='' className='border' height={120} />
-      <div className='flex gap-4 items-center justify-between p-4'>
-        <div className='flex justify-between flex-col'>
-          <div>{name}</div>
+    <li className="border rounded relative list-none min-w-[16rem] max-w-[18rem]">
+      <img src={image} alt="" className="border rounded-t" height={300} />
+      <div className="flex gap-4 items-center justify-between p-4">
+        <div>{name}</div>
+        <div className="flex items-center gap-4">
           <div>{price}</div>
+          <Button children="cart" />
         </div>
-          <Button children='cart' />
       </div>
     </li>
   );
