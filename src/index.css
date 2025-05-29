@@ -3,7 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 
-
 html.lenis,
 html.lenis body {
   height: auto;
@@ -15,7 +14,8 @@ html.lenis body {
   margin: 0;
 }
 
-.html {}
+.html {
+}
 
 :root {
   font-size: 16px;
@@ -36,24 +36,24 @@ html.lenis body {
   }
 
   .commit_container {
-    @apply flex flex-col py-12 items-center gap-8 border
+    @apply flex flex-col py-12 items-center gap-8 border;
   }
-  .collation_container{
-    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  .collation_container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     @apply grid;
   }
-  .collation_elements{
-    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+  .collation_elements {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     @apply grid;
   }
-  .element{
+  .element {
     @apply p-4 border;
   }
-  .products{
-    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     @apply grid py-8;
   }
-  .filter{
+  .filter {
     @apply flex flex-col;
   }
   .services_container {
@@ -62,10 +62,9 @@ html.lenis body {
     row-gap: 8rem;
     @apply w-full h-auto grid  py-24;
   }
-  .products_wib{
-    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+  .products_wib {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     @apply grid;
-
   }
   .hero_content {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -73,7 +72,7 @@ html.lenis body {
   }
 
   .hero_call_to_action {
-    @apply flex flex-col gap-8
+    @apply flex flex-col gap-8;
   }
   h1 {
     @apply text-5xl sm:text-5xl md:text-5xl font-bold text-gray-900;
@@ -99,8 +98,8 @@ html.lenis body {
     @apply text-lg sm:text-xl md:text-2xl font-light text-gray-900;
   }
 
-  p{
-    @apply text-lg
+  p {
+    @apply text-lg;
   }
 }
 
@@ -121,6 +120,8 @@ html.lenis body {
   src: url(/fonts/Quicksand_wght.ttf);
 }
 
-main {}
+main {
+}
 
-@layer components {}
+@layer components {
+}
