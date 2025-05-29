@@ -1,6 +1,4 @@
 function ProductPage() {
-  return (
-    <main>ProductPage</main>
-  )
+  return <main>ProductPage</main>;
 }
-export default ProductPage
+export default ProductPage;

@@ -4,13 +4,13 @@ import Products from '../../sections/Products';
 import Services from '../../sections/services/indxe';
 import Testimonies from '../../sections/Testimonies';
 
-function Home () {
+function Home() {
   return (
     <section>
-      <Hero/>
+      <Hero />
       <Testimonies />
-      <Services/>
-      <Collation/>
+      <Services />
+      <Collation />
     </section>
   );
 }
