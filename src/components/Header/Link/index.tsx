@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
-interface mylink_prop{
-    url:string,
-    name:string
+interface mylink_prop {
+  url: string;
+  content: string | ReactElement;
 }
 
-function MyLink (item:mylink_prop) {
+function MyLink(item: mylink_prop) {
   return (
     <Link to={item.url}>
-      <li>{item.name}</li>
+      <li>{item.content}</li>
     </Link>
   );
 }

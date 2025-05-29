@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { AllHTMLAttributes, HTMLAttributes, InputHTMLAttributes, ReactElement, useState } from 'react';
 
 type InputProps = {
   label?: string;
@@ -10,7 +10,7 @@ type InputProps = {
   required?: boolean;
   className?: string;
   icon?: ReactElement;
-};
+}&InputHTMLAttributes<HTMLInputElement>;
 
 export default function Input({
   label,
@@ -22,12 +22,13 @@ export default function Input({
   required = false,
   icon,
   className = '',
+  ...props
 }: InputProps) {
   const [touched, setTouched] = useState(false);
   const hasError = error && touched;
-  
+
   return (
-    <div className={`flex flex-col gap-1 ${className}`}>
+    <div className={`flex flex-col gap-1 ${className}`}{...props}>
       {label && (
         <label className="text-sm font-medium text-white">
           {label} {required && <span className="text-red-500">*</span>}
