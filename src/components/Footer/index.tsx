@@ -1,6 +1,4 @@
 function Footer() {
-  return (
-    <footer className="content">Footer</footer >
-  )
+  return <footer className="content">Footer</footer>;
 }
-export default Footer
+export default Footer;

@@ -12,7 +12,7 @@ let links = [
   { name: 'about', url: '' },
 ];
 let info = [
-  { name: 'my_account', url: '', icon: <TbUser size={'1.5rem'} /> },
+  { name: 'my_account', url: '/auth', icon: <TbUser size={'1.5rem'} /> },
   { name: 'cart', url: '', icon: <TbBasket size={'1.5rem'} /> },
 ];
 type Header_Props = {} & AllHTMLAttributes<HTMLDivElement>;
@@ -20,10 +20,7 @@ type Header_Props = {} & AllHTMLAttributes<HTMLDivElement>;
 function Header (props: Header_Props) {
   let openAsdie = useAside(state => state.toggle);
   return (
-    <header
-      className={'border-b py-4 text-sm  w-full bg-white '}
-      {...props}
-    >
+    <header className={'border-b py-4 text-sm  w-full bg-white '} {...props}>
       <div className='md:flex hidden content w-full  flex-col gap-4 '>
         <div className='flex justify-between'>
           <Logo />
@@ -36,12 +33,12 @@ function Header (props: Header_Props) {
         <nav className='flex justify-between w-full'>
           <div className='flex list-none gap-4 font-semibold'>
             {links.map((item, i) => (
-              <MyLink key={i} url={item.url} name={item.name} />
+              <MyLink key={i} url={item.url} content={item.name} />
             ))}
           </div>
-          <div className='flex gap-4'>
-            {info.map((item,i) => (
-              <div key={i}>{item.icon}</div>
+          <div className='flex gap-4 list-none'>
+            {info.map((item, i) => (
+              <MyLink key={i} url={item.url} content={item.icon} />
             ))}
           </div>
         </nav>

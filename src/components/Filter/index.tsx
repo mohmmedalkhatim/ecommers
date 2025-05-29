@@ -1,6 +1,4 @@
 function Filter() {
-  return (
-    <section>Filiter</section>
-  )
+  return <section>Filiter</section>;
 }
-export default Filter
+export default Filter;

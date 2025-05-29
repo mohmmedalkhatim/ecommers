@@ -7,7 +7,7 @@ type ButtonProps = {
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button ({
+function Button({
   variant = 'primary',
   size = 'md',
   className = '',
