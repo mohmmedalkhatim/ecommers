@@ -14,9 +14,6 @@ html.lenis body {
   margin: 0;
 }
 
-.html {
-}
-
 :root {
   font-size: 16px;
   line-height: 24px;
@@ -47,8 +44,9 @@ html.lenis body {
     @apply grid;
   }
   .element {
-    @apply p-4 border;
+    @apply border;
   }
+  
   .products {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     @apply grid py-8;
@@ -100,6 +98,12 @@ html.lenis body {
 
   p {
     @apply text-lg;
+  }
+  .orders{
+    @apply p-4 w-[20rem] h-[10rem] relative;
+  }
+  .order{
+    @apply absolute w-[10rem] rounded;
   }
 }
 
