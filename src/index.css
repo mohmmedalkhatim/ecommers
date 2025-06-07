@@ -20,7 +20,7 @@ html.lenis body {
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
   overflow-y: visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,35 +35,42 @@ html.lenis body {
   .commit_container {
     @apply flex flex-col py-12 items-center gap-8 border;
   }
+
   .collation_container {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     @apply grid;
   }
+
   .collation_elements {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     @apply grid;
   }
+
   .element {
     @apply border;
   }
-  
+
   .products {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     @apply grid py-8;
   }
+
   .filter {
     @apply flex flex-col;
   }
+
   .services_container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     column-gap: 4rem;
     row-gap: 8rem;
-    @apply w-full h-auto grid  py-24;
+    @apply w-full h-auto grid py-24;
   }
+
   .products_wib {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     @apply grid;
   }
+
   .hero_content {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     @apply grid;
@@ -72,6 +79,7 @@ html.lenis body {
   .hero_call_to_action {
     @apply flex flex-col gap-8;
   }
+
   h1 {
     @apply text-5xl sm:text-5xl md:text-5xl font-bold text-gray-900;
   }
@@ -99,11 +107,29 @@ html.lenis body {
   p {
     @apply text-lg;
   }
-  .orders{
+
+  .orders {
     @apply p-4 w-[20rem] h-[10rem] relative;
   }
-  .order{
+
+  .order {
     @apply absolute w-[10rem] rounded;
+  }
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  gap: 1rem;
+  padding:1rem;
+  scroll-behavior: smooth;
+  
+  li {
+    padding: 1rem;
+    border-radius: 3px;
+    min-width: 20rem;
+    min-height: 20rem;
   }
 }
 
@@ -124,8 +150,6 @@ html.lenis body {
   src: url(/fonts/Quicksand_wght.ttf);
 }
 
-main {
-}
+main {}
 
-@layer components {
-}
+@layer components {}
