@@ -1,10 +1,10 @@
-import { TbMenu } from "react-icons/tb"
+import { TbMenu } from 'react-icons/tb';
 
 function BargerMenu() {
   return (
     <div>
-        <TbMenu/>
+      <TbMenu />
     </div>
-  )
+  );
 }
-export default BargerMenu
+export default BargerMenu;
