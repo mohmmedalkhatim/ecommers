@@ -4,9 +4,10 @@
   .content {
     @apply px-8 sm:px-12 md:px-40 xl:px-48;
   }
-
+  .cart_header{
+  }
   header {
-    @apply fixed top-0;
+    @apply fixed top-0 z-50;
   }
   input {
     @apply py-2 px-3 rounded-md border;
@@ -17,5 +18,9 @@
   }
   footer {
     @apply bottom-0 w-full h-32 text-sm border-t py-4;
+  }
+  .testimonies_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
   }
 }
