@@ -1,11 +1,10 @@
-import { AllHTMLAttributes, HTMLAttributes, InputHTMLAttributes, ReactElement, useState } from 'react';
+import { InputHTMLAttributes, ReactElement, useState } from 'react';
 
 type InputProps = {
   label?: string;
   type?: 'text' | 'email' | 'password' | 'number';
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
   error?: string;
   required?: boolean;
   className?: string;
@@ -17,7 +16,6 @@ export default function Input({
   type = 'text',
   placeholder,
   value,
-  onChange,
   error,
   required = false,
   icon,
@@ -44,7 +42,7 @@ export default function Input({
           type={type}
           value={value}
           placeholder={placeholder}
-          onChange={(e) => onChange?.(e.target.value)}
+          onChange={props.onChange}
           onBlur={() => setTouched(true)}
           className="grow outline-none border-none text-xs rounded-none  bg-transparent placeholder:text-[#ffffff90]"
         />

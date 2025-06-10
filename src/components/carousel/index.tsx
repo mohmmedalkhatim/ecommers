@@ -10,7 +10,7 @@ function Carousel () {
     ref.current?.scrollTo(val, 0);
   }, [active]);
   return (
-    <section className='content  relative'>
+    <section className='content  relative py-12'>
       <ul className='carousel px-[2rem] list-none border  rounded' ref={ref}>
         <div
           className='absolute lg:-left-[4rem] left-0 bg-white  to-[#e5e7eb] ml-8 sm:ml-12 md:ml-40 xl:ml-48  border flex items-center  h-[20rem]'
