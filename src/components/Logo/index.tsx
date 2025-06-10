@@ -1,6 +1,4 @@
 function Logo() {
-  return (
-    <div>Logo</div>
-  )
+  return <div>Logo</div>;
 }
-export default Logo
+export default Logo;
