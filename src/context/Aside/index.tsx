@@ -2,12 +2,12 @@ import { create } from 'zustand';
 
 interface Aside {
   state: boolean;
-  toggle:()=>void;
+  toggle: () => void;
 }
 
-export let useAside = create<Aside>(set => ({
+export let useAside = create<Aside>((set) => ({
   state: false,
   toggle: () => {
-    set(state => ({ state: !state.state }));
+    set((state) => ({ state: !state.state }));
   },
 }));

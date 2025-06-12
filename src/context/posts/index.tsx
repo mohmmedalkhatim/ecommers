@@ -1,11 +1,10 @@
 import { create } from 'zustand';
 import { pb } from '../../main';
 
-
 class Error {
   isError: boolean = false;
   details: string = '';
-  constructor (details: string) {
+  constructor(details: string) {
     this.isError = true;
     this.details = details;
   }
@@ -25,7 +24,7 @@ interface Post_Logic {
   retrieve: (id: string) => Post;
 }
 
-let usePosts = create<Post_Logic>(set => ({
+let usePosts = create<Post_Logic>((set) => ({
   loading: false,
   create: async (t, c) => {
     set({ loading: true });
@@ -36,10 +35,10 @@ let usePosts = create<Post_Logic>(set => ({
     let record;
     pb.collection('posts')
       .create(data)
-      .then(res => {
+      .then((res) => {
         record = res;
       })
-      .catch(error => {
+      .catch((error) => {
         set({ Error: new Error(error) });
       })
       .finally(() => set({ loading: false }));
@@ -51,23 +50,23 @@ let usePosts = create<Post_Logic>(set => ({
       .then(() => {
         console.log('done');
       })
-      .catch(e => set({ Error: new Error(e) }))
+      .catch((e) => set({ Error: new Error(e) }))
       .finally(() => set({ loading: false }));
   },
-  delete: id => {
+  delete: (id) => {
     pb.collection('posts')
       .delete(id)
       .then(() => {
         console.log('done');
       })
-      .catch(e => set({ Error: new Error(e) }))
+      .catch((e) => set({ Error: new Error(e) }))
       .finally(() => set({ loading: false }));
   },
-  retrieve: id => {
+  retrieve: (id) => {
     let item = {} as Post;
     pb.collection('post')
       .getOne(id)
-      .then(res => {
+      .then((res) => {
         item = { ...res.expand } as Post;
       });
     return item;
