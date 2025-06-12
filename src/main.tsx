@@ -25,6 +25,7 @@ gsap.registerPlugin(ScrollTrigger, Text, useGSAP);
 
 export let pb = new Pocketbase('http://127.0.0.1:8090');
 
+
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />

@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from 'react';
-import { classNames } from '../../util/classesName';
+import { classNames } from '../../util';
 
 type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'danger';

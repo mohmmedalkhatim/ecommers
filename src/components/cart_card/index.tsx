@@ -1,16 +1,26 @@
-import { Product } from "../../context/Product";
-import Button from "../Button";
+import { Product } from '../../context/Product';
+import { getUrl } from '../../util';
 
-function CartCard ({ image, name, price }: Product) {
+function CartCard (props: Product) {
   
   return (
-    <div className="col-span-2">
-      <li className='border rounded relative list-none flex '>
-        <img src={image} alt='' className='border rounded-t' width={300}  />
+    <div className='col-span-2'>
+      <li className='border rounded h-80 relative list-none flex '>
+        <div className='w-[300px] h-80 overflow-hidden'>
+          <img
+            src={getUrl(props, props.picture)}
+            alt=''
+            className='border rounded-t'
+            width={300}
+          />
+        </div>
         <div className='flex gap-4 p-4'>
-          <div>{name}</div>
+          <div>{props.name}</div>
           <div className='flex '>
-            <div>{price}</div>
+            <div>{props.price}</div>
+          </div>
+          <div>
+            {props.quantity}
           </div>
         </div>
       </li>
