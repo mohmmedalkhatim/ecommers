@@ -1,11 +1,35 @@
-export type Product = {
+import { create } from 'zustand';
+import { pb } from '../../main';
+
+export interface Product{
   id?: number;
   name: string;
   price: number;
-  image: string;
+  picture: string;
+  pictures: string[];
   quantity?: number;
 };
 interface Product_context {
-    one:()=>Product;
-    list:(page:number)=>Product[];
+  product: (id: string, setProduct: any) => Promise<void>;
+  list: (page: number, setList: any) => Promise<void>;
 }
+
+export let useProduct = create<Product_context>(set => ({
+  product: async (id, setProduct) => {
+    await pb.collection('product')
+      .getOne(id)
+      .then(res => {
+        console.log(res);
+        setProduct(res);
+      });
+  },
+  list: async (page, setList) => {
+    await pb
+      .collection('product')
+      .getFullList()
+      .then((res: any) => {
+        setList(res);
+        console.log(res[0].picture);
+      });
+  },
+}));
