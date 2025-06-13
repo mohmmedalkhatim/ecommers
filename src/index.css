@@ -80,6 +80,10 @@ html.lenis body {
   .hero_call_to_action {
     @apply flex flex-col gap-8;
   }
+  .three_cols_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+  }
 
   h1 {
     @apply text-5xl sm:text-5xl md:text-5xl font-bold text-gray-900;
