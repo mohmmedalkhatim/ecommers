@@ -8,27 +8,31 @@ function ProductCard (props: Product) {
   const add_Product = useCart(state => state.add_Product);
 
   return (
-    <li className='border rounded mx-auto relative list-none min-w-[16rem] max-w-[18rem]'>
-      <div className='h-[300px] w-[280px] overflow-hidden'>
+    <li className='border rounded mx-auto  list-none min-w-[16rem] group max-w-[18rem]'>
+      <div className='h-[300px] w-[280px] relative overflow-hidden'>
         <img
           src={getUrl(props, props.picture)}
           alt=''
           className='border rounded-t'
           height={300}
         />
-      </div>
-      <div className='flex gap-4 items-center justify-between p-4'>
-        <Link to={`/product/${props.id}`}>
+        <div className='bg-gradient-to-r hidden group-hover:flex bottom-0 from-[#000000] absolute w-full h-full to-[#ffffff01]'>
+
+        </div>
+        <Link
+          to={`/product/${props.id}`}
+          className='absolute top-4 opacity-0 transition-opacity group-hover:opacity-100 left-4 text-white'
+        >
           <div className=''>{props.name}</div>
         </Link>
-        <div className='flex items-center gap-4'>
+        <div className='items-center gap-4 absolute bottom-5 opacity-0 group-hover:opacity-100  flex transition-opacity justify-between w-full px-4 text-white'>
           <div>{props.price}</div>
           <Button
             children='cart'
             onClick={() => {
               add_Product({
                 ...props,
-                include:true
+                include: true,
               });
             }}
           />
