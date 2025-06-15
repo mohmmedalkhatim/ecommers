@@ -16,16 +16,16 @@ function ProductCard (props: Product) {
           className='border rounded-t'
           height={300}
         />
-        <div className='bg-gradient-to-r hidden group-hover:flex bottom-0 from-[#000000] absolute w-full h-full to-[#ffffff01]'>
+        <Link to={`/product/${props.id}`} className='bg-gradient-to-r hidden group-hover:flex bottom-0 from-[#00000095] absolute w-full h-full to-[#00000021]'>
 
-        </div>
+        </Link>
         <Link
           to={`/product/${props.id}`}
           className='absolute top-4 opacity-0 transition-opacity group-hover:opacity-100 left-4 text-white'
         >
           <div className=''>{props.name}</div>
         </Link>
-        <div className='items-center gap-4 absolute bottom-5 opacity-0 group-hover:opacity-100  flex transition-opacity justify-between w-full px-4 text-white'>
+        <div className='items-center gap-4 absolute bottom-4 opacity-0 group-hover:opacity-100  flex transition-opacity justify-between w-full px-4 text-white'>
           <div>{props.price}</div>
           <Button
             children='cart'
