@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { BiChevronDown, BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+import {  BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+import { getUrl } from '../../util';
+import { Product } from '../../context/Product';
 
-function Carousel () {
-  let [list, setList] = useState<number[]>([0, 1, 2, 3, 4]);
+function Carousel ({list,product}:{list:string[],product:Product}) {
   let [active, setActive] = useState<number>(0);
   let ref = useRef<HTMLUListElement>(null);
   useEffect(() => {
@@ -25,8 +26,10 @@ function Carousel () {
         >
           <BiChevronLeft size={'3rem'} />
         </div>
-        {list?.map((_, i) => (
-          <li className='border' key={i} onClick={() => setActive(i)}></li>
+        {list?.map((item, i) => (
+          <li className='border overflow-hidden' key={i} onClick={() => setActive(i)}>
+            <img src={getUrl(product,item)} alt="" />
+          </li>
         ))}
         <div
           className='absolute lg:-right-[4rem] right-0 bg-white mr-8 sm:mr-12 md:mr-40 xl:mr-48 border flex items-center  h-[20rem]'
