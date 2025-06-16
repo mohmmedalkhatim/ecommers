@@ -131,7 +131,6 @@ html.lenis body {
   scroll-behavior: smooth;
   
   li {
-    padding: 1rem;
     border-radius: 3px;
     min-width: 20rem;
     min-height: 20rem;
