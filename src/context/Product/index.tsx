@@ -9,6 +9,7 @@ export interface Product{
   description:string;
   pictures: string[];
   quantity?: number;
+  commits_ids: string[]
 };
 interface Product_context {
   product: (id: string, setProduct: any) => Promise<void>;
