@@ -10,6 +10,7 @@ function Carousel ({list,product}:{list:string[],product:Product}) {
     let val = active * 16 * 20 - 16;
     ref.current?.scrollTo(val, 0);
   }, [active]);
+
   return (
     <section className='content  relative py-12'>
       <ul className='carousel px-[2rem] list-none border  rounded' ref={ref}>
@@ -27,8 +28,8 @@ function Carousel ({list,product}:{list:string[],product:Product}) {
           <BiChevronLeft size={'3rem'} />
         </div>
         {list?.map((item, i) => (
-          <li className='border overflow-hidden' key={i} onClick={() => setActive(i)}>
-            <img src={getUrl(product,item)} alt="" />
+          <li className='border overflow-hidden h-[20rem]' key={i} onClick={() => setActive(i)}>
+            <img src={getUrl(product,item)} height={320} alt="" />
           </li>
         ))}
         <div

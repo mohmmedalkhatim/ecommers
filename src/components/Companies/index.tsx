@@ -14,7 +14,7 @@ let list = [
 
 function Companies () {
   return (
-    <section>
+    <section className='py-12'>
       <div className='content three_cols_grid'>
         {list.map(item => (
           <div className='flex items-center justify-center h-[5rem]'>
