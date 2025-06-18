@@ -6,7 +6,7 @@ type commit_props = {
 
 function Commit({ name, image, content }: commit_props) {
   return (
-    <div className="commit_container">
+    <div className="commit_container mx-[auto]">
       <div className="flex items-center gap-4">
         <div className={`commit_img bg-[url(${image})]`} />
         <div className="h-4/5">
