@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
 import Collation from '../../sections/Collation';
 
 let list = [
   {
-    rev:true,
+    rev: true,
     main: '/imgs/ring.jpg',
     images: [
       '/imgs/ring.jpg',
@@ -12,7 +13,7 @@ let list = [
     ],
   },
   {
-    rev:false,
+    rev: false,
     main: '/imgs/ring.jpg',
     images: [
       '/imgs/ring.jpg',
@@ -21,8 +22,8 @@ let list = [
       '/imgs/ring.jpg',
     ],
   },
-  { 
-    rev:true,
+  {
+    rev: true,
     main: '/imgs/ring.jpg',
     images: [
       '/imgs/ring.jpg',
@@ -31,8 +32,8 @@ let list = [
       '/imgs/ring.jpg',
     ],
   },
-  { 
-    rev:false,
+  {
+    rev: false,
     main: '/imgs/ring.jpg',
     images: [
       '/imgs/ring.jpg',
@@ -44,6 +45,10 @@ let list = [
 ];
 
 function Collations ({}: {}) {
+  useEffect(() => {
+    let lenis = document.querySelector('.lenis');
+    if (lenis) lenis.scrollTo(0, 0);
+  }, []);
   return (
     <main>
       {list.map(item => (
