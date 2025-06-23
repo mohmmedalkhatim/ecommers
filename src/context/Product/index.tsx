@@ -2,14 +2,14 @@ import { create } from 'zustand';
 import { pb } from '../../main';
 
 export interface Product{
-  id?: number;
+  id: string;
   name: string;
   price: number;
   picture: string;
   description:string;
   pictures: string[];
   quantity?: number;
-  commits_ids: string[]
+  commits: string[]
 };
 interface Product_context {
   product: (id: string, setProduct: any) => Promise<void>;
@@ -21,7 +21,6 @@ export let useProduct = create<Product_context>(set => ({
     await pb.collection('product')
       .getOne(id)
       .then(res => {
-        console.log(res);
         setProduct(res);
       });
   },
