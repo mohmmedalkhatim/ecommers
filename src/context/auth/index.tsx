@@ -29,7 +29,6 @@ export type User = {
 
 interface Auth_Logic {
   loading: boolean;
-  login: boolean;
   Error?: Error;
   signup: (data: User) => Promise<void>;
   logout: () => Promise<void>;
@@ -40,20 +39,16 @@ interface Auth_Logic {
 
 export let useAuth = create<Auth_Logic>(set => ({
   loading: false,
-  login: false,
   signup: async (data: User) => {
     const record = await pb.collection('users').create(data);
   },
   signin: async (email, password) => {
     await pb.collection('users').authWithPassword(email, password);
     console.log(pb.authStore.record);
-    if (pb.authStore.isValid) {
-      set({ login: true });
-    }
   },
-  logout: async ()=>{
-    pb.authStore.clear()
-    set({login:false})
+  logout: async () => {
+    
+    pb.authStore.clear();
   },
   update: () => {},
   delete: () => {},
