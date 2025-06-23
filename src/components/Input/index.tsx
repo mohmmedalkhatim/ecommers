@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, ReactElement, useState } from 'react';
-
+import { Input } from '@headlessui/react';
 type InputProps = {
   label?: string;
   type?: 'text' | 'email' | 'password' | 'number';
@@ -11,7 +11,7 @@ type InputProps = {
   icon?: ReactElement;
 }&InputHTMLAttributes<HTMLInputElement>;
 
-export default function Input({
+export default function myInput({
   label,
   type = 'text',
   placeholder,
@@ -38,9 +38,10 @@ export default function Input({
           ${hasError ? 'border-red-500' : 'border-stone-400'} 
           focus-within:ring focus-within:ring-[#e2e2e220]`}
       >
-        <input
+        <Input
           type={type}
           value={value}
+          name={props.name}
           placeholder={placeholder}
           onChange={props.onChange}
           onBlur={() => setTouched(true)}
