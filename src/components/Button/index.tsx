@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 import { classNames } from '../../util';
+import { Button } from '@headlessui/react';
 
 type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'danger';
@@ -7,7 +8,7 @@ type ButtonProps = {
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button({
+function myButton({
   variant = 'primary',
   size = 'md',
   className = '',
@@ -28,7 +29,7 @@ function Button({
   };
 
   return (
-    <button
+    <Button
       className={classNames(
         baseStyles,
         variantStyles[variant],
@@ -38,7 +39,7 @@ function Button({
       {...props}
     >
       {children}
-    </button>
+    </Button>
   );
 }
-export default Button;
+export default myButton;
