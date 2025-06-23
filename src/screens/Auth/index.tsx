@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import Button from '../../components/Button';
 import MyLink from '../../components/Header/Link';
 import Profile from './Profile';
-import { useAuth } from '../../context/auth';
+import { pb } from '../../main';
 
 function Auth (): ReactElement {
   return (
@@ -14,11 +14,10 @@ function Auth (): ReactElement {
   );
 }
 function Account () {
-  let login = useAuth(state=>state.login)
   return (
     <main>
       <section className='content list-none'>
-        {login ? <Profile /> : <Auth />}
+        {pb.authStore.isValid ? <Profile /> : <Auth />}
       </section>
     </main>
   );
