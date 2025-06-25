@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="pt-[6.7rem]">
+      <div className="md:pt-[6.7rem] pt-[4rem]">
         <Outlet />
       </div>
       <Footer />
