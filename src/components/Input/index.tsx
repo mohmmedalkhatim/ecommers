@@ -45,7 +45,7 @@ export default function myInput({
           placeholder={placeholder}
           onChange={props.onChange}
           onBlur={() => setTouched(true)}
-          className="grow outline-none border-none text-xs rounded-none  bg-transparent placeholder:text-[#ffffff90]"
+          className="grow outline-none border-none placeholder:text-gray-400 text-xs rounded-none  bg-transparent placeholder:text-[#ffffff90]"
         />
         <div
           className={`rounded-r-sm pb-1 pt-[4px] pr-2  transition-colors

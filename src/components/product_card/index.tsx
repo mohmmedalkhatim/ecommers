@@ -32,6 +32,7 @@ function ProductCard (props: Product) {
             onClick={() => {
               add_Product({
                 ...props,
+                quantity:1,
                 include: true,
               });
             }}

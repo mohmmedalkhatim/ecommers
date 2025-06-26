@@ -8,7 +8,7 @@ interface mylink_prop {
 
 function MyLink(item: mylink_prop) {
   return (
-    <Link to={item.url}>
+    <Link to={item.url} className=' select-none'>
       <li>{item.content}</li>
     </Link>
   );
