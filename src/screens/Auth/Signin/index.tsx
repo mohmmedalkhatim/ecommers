@@ -4,23 +4,25 @@ import Button from '../../../components/Button';
 import MyLink from '../../../components/Header/Link';
 import { useAuth } from '../../../context/auth';
 import { Link } from 'react-router-dom';
+import { pb } from '../../../main';
 
 function Signin () {
   let ref = useRef<HTMLAnchorElement>(null);
   let [email, setEmail] = useState('test@example.com');
   let [password, setPassword] = useState('12345678');
   let sign_in = useAuth(state => state.signin);
-  let login = useAuth(state => state.login);
-  if (!login) {
+  if (!pb.authStore.isValid) {
     return (
       <main className='content'>
-        <section className='content'>
+        <section className=''>
           <div className=' py-16 h-[30rem] flex  justify-center gap-40'>
             <div>
               <form
-                onSubmit={e => {
+                onSubmit={async e => {
                   e.preventDefault();
-                  sign_in(email, password);
+                  await sign_in(email, password).then(() => {
+                    ref.current?.click();
+                  });
                 }}
                 className='w-[18rem] flex flex-col gap-4'
               >

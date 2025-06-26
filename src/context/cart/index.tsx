@@ -8,7 +8,7 @@ interface Cart {
   list: cart_element[];
   total_price: number;
   add_Product: (item: cart_element) => void;
-  remove_Product: (id: number) => void;
+  remove_Product: (id: string) => void;
   update_Product: (item: cart_element) => void;
 }
 
@@ -20,20 +20,20 @@ export let useCart = create<Cart>(set => ({
       let filter = state.list.filter(iter => iter.id != item.id);
       let element = state.list.find(ele => ele.id == item.id);
       if (element) {
-        if (element.quantity) element.quantity += 1;
+        if (element.quantity) element.quantity += item.quantity || 1;
         return {
           list: [...filter, { ...element }],
           total_price: state.total_price + item.price ,
         };
       } else {
         return {
-          list: [...filter, { ...item, quantity: 1 }],
+          list: [...filter, { ...item }],
           total_price: state.total_price + item.price ,
         };
       }
     });
   },
-  remove_Product: (id: number) =>
+  remove_Product: (id) =>
     set(state => {
       let item = state.list.find(item => item.id === id);
       return {
