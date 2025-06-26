@@ -9,7 +9,7 @@ function Product_info (product: Product) {
   const add = useCart(state => state.add_Product);
   const [mainImage, setMainImage] = useState('');
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
     setMainImage(getUrl(product, product.picture));
   }, [product]);
@@ -23,7 +23,7 @@ function Product_info (product: Product) {
           }}
         >
           {product.pictures?.map(item => (
-            <div
+            <div key={item}
               onMouseEnter={() => {
                 setMainImage(getUrl(product, item));
               }}

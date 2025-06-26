@@ -7,7 +7,7 @@ function Hero() {
         <div className="">
           <div className="hero_call_to_action pt-[5rem] h-full">
             <h1>welcome</h1>
-            <p className="w-[27rem] text-base">
+            <p className="max-w-[27rem] min-w-[10rem] text-base">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Distinctio veniam id consequatur tempora recusandae, similique
               odit.
