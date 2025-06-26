@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Product, useProduct } from '../../../context/Product';
 import Product_info from './information';
 import Carousel from '../../../components/carousel';
-import { useLenis } from 'lenis/react';
+import Commits from './commits_section';
 
 function ProductPage () {
   let { id } = useParams();
@@ -22,6 +22,7 @@ function ProductPage () {
         <section className='lg:px-20'>
           <Carousel product={product} list={product.pictures} />
         </section>
+        <Commits product={product} setProduct={setProduct} />
       </main>
     );
   }
