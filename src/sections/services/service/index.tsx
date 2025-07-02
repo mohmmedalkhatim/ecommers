@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import { TbCode } from 'react-icons/tb';
 
 type servie_props = {
   icon: ReactElement;
