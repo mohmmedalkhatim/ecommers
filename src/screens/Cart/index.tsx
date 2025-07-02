@@ -8,7 +8,7 @@ function Cart () {
     <>
       <CartHeader />
       <main className='content pt-[4rem] py-8'>
-        <ul className='products_wib gap-4 list-none'>
+        <ul className='products_wib  gap-4 list-none auto-rows-[20rem] min-h-[25rem]' >
           {list.map(item => (
             <CartCard {...item} />
           ))}
