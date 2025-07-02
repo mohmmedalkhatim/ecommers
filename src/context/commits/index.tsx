@@ -50,8 +50,8 @@ export let useCommits = create<commit_context>(() => ({
           })
           .then(res => {
             setProduct(res);
+            setCommits([...commits, res.id]);
           });
-        setCommits([...commits, res.id]);
       });
   },
   modify: () => {},

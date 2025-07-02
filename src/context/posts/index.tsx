@@ -26,11 +26,11 @@ interface Post_Logic {
 
 let usePosts = create<Post_Logic>((set) => ({
   loading: false,
-  create: async (t, c) => {
+  create: async (title, content) => {
     set({ loading: true });
     const data = {
-      title: t,
-      content: c,
+      title,
+      content,
     };
     let record;
     pb.collection('posts')
