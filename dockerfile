@@ -2,16 +2,14 @@ FROM  node:21 as frontend
 
 WORKDIR /app
 
-RUN apt-get install node
-
-ENV PORT=8080
+ENV PORT 8080
 
 COPY package.json ./
 
 RUN npm install
 
-COPY . .
+COPY . /app
 
-CMD [ "npm","host" ]
+CMD [ "npm","dev" ]
 
 EXPOSE 5173:8080
