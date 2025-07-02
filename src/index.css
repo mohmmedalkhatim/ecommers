@@ -69,8 +69,7 @@ html.lenis body {
 
   .products_wib {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-auto-rows: 20rem;
-    min-height: 30rem;
+
     @apply grid;
   }
 
