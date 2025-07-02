@@ -15,9 +15,9 @@ function Product_info (product: Product) {
   }, [product]);
   return (
     <section className='collation_container content gap-12 pt-0'>
-      <div className='h-[35rem] w-[32rem] flex py-8 px-12 lg:px-0'>
+      <div className='h-[35rem] w-[28rem] sm:w-[32rem] flex py-8 sm:px-12 lg:px-0'>
         <div
-          className='flex flex-col gap-1 w-[8rem] justify-center items-center'
+          className='flex flex-col gap-1 w-[4rem] justify-center items-center'
           onMouseLeave={() => {
             setMainImage(getUrl(product, product.picture));
           }}
@@ -27,7 +27,7 @@ function Product_info (product: Product) {
               onMouseEnter={() => {
                 setMainImage(getUrl(product, item));
               }}
-              className='bg-contain bg-center h-[8rem] w-[8rem] bg-no-repeat'
+              className='bg-contain bg-center h-[8rem] w-[4rem] bg-no-repeat'
               style={{
                 backgroundImage: `url(${getUrl(product, item)})`,
               }}
@@ -35,13 +35,13 @@ function Product_info (product: Product) {
           ))}
         </div>
         <div
-          className='h-full w-full bg-center bg-contain bg-no-repeat'
-          style={{
-            backgroundImage: `url(${mainImage})`,
-          }}
-        ></div>
+          className='h-full w-full px-4 bg-center bg-contain bg-no-repeat'
+
+        >
+          <img src={mainImage}  alt="" />
+        </div>
       </div>
-      <div className='md:py-8 p-16 md:pt-16 gap-8 flex flex-col'>
+      <div className='md:py-8 sm:p-16 md:pt-16 gap-8 flex flex-col'>
         <div className='flex flex-col gap-12'>
           <h4>{product.name}</h4>
           <div className='flex justify-between items-center'>

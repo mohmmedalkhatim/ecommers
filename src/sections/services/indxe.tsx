@@ -1,4 +1,4 @@
-import { TbAppWindow } from 'react-icons/tb';
+import { TbApi, TbAppWindow, TbAssembly, TbMoneybag, TbServer, TbUserDollar } from 'react-icons/tb';
 import Service from './service';
 
 let list = [
@@ -8,29 +8,29 @@ let list = [
     icon: <TbAppWindow size={'2rem'} />,
   },
   {
-    title: 'frontend ui',
+    title: 'backend',
     description: 'building a highly interactive ui',
-    icon: <TbAppWindow size={'2rem'} />,
+    icon: <TbApi size={'2rem'} />,
   },
   {
-    title: 'frontend ui',
+    title: 'low level code',
     description: 'building a highly interactive ui',
-    icon: <TbAppWindow size={'2rem'} />,
+    icon: <TbAssembly size={'2rem'} />,
   },
   {
-    title: 'frontend ui',
+    title: 'programming the server config',
     description: 'building a highly interactive ui',
-    icon: <TbAppWindow size={'2rem'} />,
+    icon:<TbServer size={'2rem'}/>
   },
   {
-    title: 'frontend ui',
+    title: 'administrator',
     description: 'building a highly interactive ui',
-    icon: <TbAppWindow size={'2rem'} />,
+    icon: <TbUserDollar size={'2rem'} />,
   },
   {
-    title: 'frontend ui',
+    title: 'marketing',
     description: 'building a highly interactive ui',
-    icon: <TbAppWindow size={'2rem'} />,
+    icon: <TbMoneybag size={'2rem'} />,
   },
 ];
 
